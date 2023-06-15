@@ -1,0 +1,57 @@
+* {box-sizing: border-box; padding: 0; margin: 0;}
+
+.container {display: flex; flex-direction: column; justify-content: center; align-items: center; height: 33vh;max-width: 200px; margin: 0 auto; position: relative;overflow: hidden;}
+
+.wrapper {display: flex; align-items: center;  position: absolute; left: 0; top: 0;}
+.wrapper div img {width: 200px;}
+.block {width: 200px; height: 200px;}
+
+.section {display: flex; justify-content: center; gap: 1rem; transition: all 1s linear; position: relative; z-index: 2; transform: translateY(100%); height: 100%;}
+.section div {cursor: pointer; }
+
+
+/* .fade{
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from{opacity: .4;}
+    to{opacity: 1;}
+}
+@keyframes fade {
+    from{opacity: .4;}
+    to{opacity: 1;}
+} */
+
+
+
+    /* Изменение цвета */
+#btnColor {padding: 5px 10px; border-radius: 3px; opacity: .6;}
+
+
+
+    /* Печатка случайных букв */
+#works {border: 1px solid gray; width: 600px; height: 200px; overflow-wrap: break-word;}
+
+
+
+    /* Автотекст */
+.autoTextLayout {position: relative; font-size: 16px;}
+.autoTextLayout::after {content:''; position: relative; top: 0; right: 0; border-right: 1px solid black; font-size: 14px; animation: aniCursor 1s linear infinite; opacity: 0;}
+@keyframes aniCursor {
+    30% {font-size: 14px; opacity: 1;}
+}
+/*
+    создаю слово 
+    копирую заданное слово в массив
+    каждую секунду добавляется буква из массива 
+    через случайный отрезок времени
+
+    беру каждую букву, через цикл добавляю её в документ
+
+    каждую секунду берется буква из массива и добавляется
+
+    каждую секунду создаю новый массив map, 
+*/
